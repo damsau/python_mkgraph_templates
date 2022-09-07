@@ -63,7 +63,7 @@ def do_linear_regression_lnxy(x, y):
     # 結果の出力
     print('モデル関数の回帰係数 a : %.3f' %linear_model.coef_)
     print('モデル関数の切片 b : %.3f' %linear_model.intercept_)
-    print('data1 = %.3fdata2 + %.3f' % (linear_model.coef_ , linear_model.intercept_))
+    print('ln(data2) = %.3fln(data1) + %.3f' % (linear_model.coef_ , linear_model.intercept_))
     print('決定係数 R^2： ', linear_model.score(ln_x, ln_y))
     return linear_model.coef_, linear_model.intercept_
 
@@ -85,7 +85,7 @@ def do_linear_regression_lny(x, y):
     # 結果の出力
     print('モデル関数の回帰係数 a : %.3f' %linear_model.coef_)
     print('モデル関数の切片 b : %.3f' %linear_model.intercept_)
-    print('data1 = %.3fdata2 + %.3f' % (linear_model.coef_ , linear_model.intercept_))
+    print('ln(data2) = %.3fdata1 + %.3f' % (linear_model.coef_ , linear_model.intercept_))
     print('決定係数 R^2： ', linear_model.score(x, ln_y))
     return linear_model.coef_, linear_model.intercept_
 
@@ -128,7 +128,7 @@ x = np.linspace(0.0, 6.0, 1000)
 line_name = 'regression line'
 # regression_line = np.array(coef*x + intercept)    # 生データのままの時
 # regression_line = np.array(np.exp(intercept)*x**coef)     # xy両方を対数変換した時
-regression_line = np.array(np.exp(coef*x + intercept))
+regression_line = np.array(np.exp(coef*x + intercept))  # yだけを対数変換した時
 x = x.reshape(-1)
 regression_line = regression_line.reshape(-1)
 ax.plot(x, regression_line, color = 'red', label = line_name)
