@@ -27,7 +27,14 @@ plt.style.use("thesis_scatter")
 x = [1, 2, 3, 4, 5]
 y = [1, 2, 3, 4, 5]
 plt.scatter(x, y)
-plt.text(1, 3, "abcde")
-plt.plot(x, y)
+plt.text(1, 3, "Brownian Dynamics")
+plt.text(1, 4, r"$a \phi$", size = 20)
+plt.xlabel(r'$a$')
+plt.ylabel(r'$a$')
+# plt.xscale('log')
+plt.plot(x, y, label = r'$\phi$')
+plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', fontsize=14)
+
+
 plt.show()
 
