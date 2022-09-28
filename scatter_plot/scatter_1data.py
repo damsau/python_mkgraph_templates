@@ -105,8 +105,8 @@ data2 = np.array([1, 2, 3, 4, 5])
 #-------------------------------------------------- 
 # 図の詳細設定
 fig, ax = plt.subplots(1, 1)  # デフォルトサイズはfigsize = (5.5, 5)
-ax.set_xlabel('$data1$')  # x軸ラベル
-ax.set_ylabel('$data2$')  # y軸ラベル
+ax.set_xlabel(r'$data1$')  # x軸ラベル
+ax.set_ylabel(r'$data2$')  # y軸ラベル
 # ax.xaxis.label.set_size(30)   # x軸ラベルのフォントサイズ，デフォルトは30
 # ax.yaxis.label.set_size(30)   # y軸ラベルのフォントサイズ，デフォルトは30
 # ax.set_xscale('log')    # x軸に対数プロットを適用

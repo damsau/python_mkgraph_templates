@@ -1,5 +1,5 @@
 #-------------------------------------------------- 
-# 横軸時間, 縦軸dataとしてline plotするプログラム
+# 横軸data1, 縦軸data2, 3, ...としてline plotするプログラム
 #-------------------------------------------------- 
 
 #-------------------------------------------------- 
@@ -19,13 +19,13 @@ print(plt.style.available)
 #-------------------------------------------------- 
 # rcParamsの設定を切り替え
 #-------------------------------------------------- 
-plt.style.use("thesis_time_series_plot")
+plt.style.use("thesis_line_plot")
 
 #-------------------------------------------------- 
 # データの読み込み
 #-------------------------------------------------- 
 # data1, data2 = np.loadtxt(fname = '????', comments = '!', unpack = True)
-data1_name = 'time'
+data1_name = 'data1'
 data2_name = 'data2'
 
 # 仮のデータ
@@ -37,8 +37,8 @@ data2 = np.array([1, 3, 2, 4, 0])
 #-------------------------------------------------- 
 # 図の詳細設定
 fig, ax = plt.subplots(1, 1)  # デフォルトサイズはfigsize = (5.5, 5)
-ax.set_xlabel(r'$t$')  # x軸ラベル
-ax.set_ylabel(r'$data2$')  # y軸ラベル
+ax.set_xlabel('$data1$')  # x軸ラベル
+ax.set_ylabel('$data2$')  # y軸ラベル
 # ax.xaxis.label.set_size(30)   # x軸ラベルのフォントサイズ，デフォルトは30
 # ax.yaxis.label.set_size(30)   # y軸ラベルのフォントサイズ，デフォルトは30
 # ax.set_xscale('log')    # x軸に対数プロットを適用
